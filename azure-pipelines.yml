@@ -23,4 +23,4 @@ steps:
   inputs:
     sshEndpoint: 'mydockermacjone'
     runOptions: 'script'
-    scriptPath: '/root/script.sh'
+    scriptPath: '/tmp/script.sh'
