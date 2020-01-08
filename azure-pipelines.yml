@@ -23,7 +23,7 @@ steps:
     runOptions: 'commands'
     commands: |
       #!/bin/bash
-      cd /root
+      cd /root/batch08
       git pull
       cd batch08/
       cp index.html /datadir
