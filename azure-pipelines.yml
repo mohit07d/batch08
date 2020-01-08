@@ -19,13 +19,8 @@ steps:
   displayName: 'Run a multi-line script'
 
       
-   - task: SSH@0
+- task: SSH@0
   inputs:
-    runOptions: 'inline'
-    inline: |
-      #!/bin/bash
-            git clone https://github.com/mohit07d/batch08.git
-            echo -e "nitin@d12" | git config --global user.name mohit07d
-            cd batch08/
-            sshpass -p 'Kurb$2cdn8@bQ3' scp index.html root@40.121.207.11:/datadir
-            echo "file copied"
+    sshEndpoint: 'mydockermacjone'
+    runOptions: 'script'
+    scriptPath: '/root/script.sh'
