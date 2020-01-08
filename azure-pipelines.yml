@@ -25,6 +25,5 @@ steps:
       #!/bin/bash
       cd /root/batch08
       git pull
-      cd batch08/
       cp index.html /datadir
       echo "file copied"
