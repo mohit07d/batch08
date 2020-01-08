@@ -1,14 +1,4 @@
 # Starter pipeline
-- task: AzureFileCopy@3
-  inputs:
-    SourcePath: 'https://github.com/mohit07d/batch08/blob/master/index.html'
-    azureSubscription: 'Pay-As-You-Go(af760a28-4e56-42d4-b014-cf05ae6c6f7a)'
-    Destination: 'AzureVMs'
-    resourceGroup: 'KUB_AKS'
-    MachineNames: 'docker-linux'
-    vmsAdminUserName: 'root'
-    vmsAdminPassword: 'Kurb$2cdn8@bQ3'
-    TargetPath: '/datadir'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
@@ -27,3 +17,14 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+- task: AzureFileCopy@3
+  inputs:
+    SourcePath: 'https://github.com/mohit07d/batch08/blob/master/index.html'
+    azureSubscription: 'Pay-As-You-Go(af760a28-4e56-42d4-b014-cf05ae6c6f7a)'
+    Destination: 'AzureVMs'
+    resourceGroup: 'KUB_AKS'
+    MachineNames: 'docker-linux'
+    vmsAdminUserName: 'root'
+    vmsAdminPassword: 'Kurb$2cdn8@bQ3'
+    TargetPath: '/datadir'
