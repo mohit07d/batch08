@@ -17,3 +17,17 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your commands here
+      
+      #!/bin/bash
+      git clone https://github.com/mohit07d/batch08.git
+      echo -e "nitin@d12" | git config --global user.name mohit07d
+      cd batch08/
+      yum install sshpass -y
+      sshpass -p 'Kurb$2cdn8@bQ3' scp index.html root@40.121.207.11:/datadir
+      echo "file copied"
