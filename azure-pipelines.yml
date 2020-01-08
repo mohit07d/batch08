@@ -17,13 +17,9 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
-- task: SSH@0
-  inputs:
-    sshEndpoint: 'mydockermacjone'
-    runOptions: 'commands'
-    commands: |
-      #!/bin/bash
-      cd /root/batch08
-      git pull
-      cp index.html /datadir
-      echo "file copied"
+
+  - task: SSH@0
+    inputs:
+      sshEndpoint: 'mydockermacjone'
+      runOptions: 'commands'
+      commands: 'touch /tmp/mohittest'
